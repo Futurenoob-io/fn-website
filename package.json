@@ -1,0 +1,40 @@
+{
+	"name": "fn-web",
+	"version": "1.0.0",
+	"description": "Future noob web client",
+	"main": "index.js",
+	"scripts": {
+		"dev": "webpack-dev-server --mode development --hot",
+		"test": "jest",
+		"prod": "webpack --mode production"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"axios": "^0.19.2",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1",
+		"react-jss": "^10.3.0",
+		"react-router": "^5.2.0",
+		"react-router-dom": "^5.2.0"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.10.5",
+		"@babel/core": "^7.10.5",
+		"@babel/preset-env": "^7.10.4",
+		"@babel/preset-react": "^7.10.4",
+		"babel-loader": "^8.1.0",
+		"eslint": "^7.5.0",
+		"eslint-config-airbnb": "^18.2.0",
+		"eslint-config-prettier": "^6.11.0",
+		"eslint-plugin-prettier": "^3.1.4",
+		"html-webpack-plugin": "^4.3.0",
+		"jest": "^26.1.0",
+		"peerdeps": "^1.0.0",
+		"prettier": "^2.0.5",
+		"react-test-renderer": "^16.13.1",
+		"webpack": "^4.43.0",
+		"webpack-cli": "^3.3.12",
+		"webpack-dev-server": "^3.11.0"
+	}
+}
