@@ -1,6 +1,6 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
-import NavMenu from '../nav/NavMenu';
+import NavMenu from './NavMenu';
 
 function Header(props) {
 	return (
