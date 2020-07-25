@@ -21,9 +21,25 @@ The build is minified and the filenames include the hashes.<br />
 App is ready to be deployed! with the files in the dist folder
 
 
-## Software used
+## Main Packages used
+
+### `react`
+Javascript library for building user interfaces
+
+### `Axios`
+Axios is a Javascript library used to make HTTP requests from node.js or XMLHttpRequests from the browser.
+It supports the ES6 Promise AP.
+
+### `react-router`
+A tool that allows you to handle routes in a web app, using dynamic routing
+
+### `react-jss`
+React-JSS integrates JSS with React using the new Hooks API.
+Can be used to provide dynamic styling - css in jss..
 
 
+### `webpack`
+webpack is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging
 
 ### `Enzyme, Jest`
 Jest and Enzyme are different but complimentary tools, that integrate well together to provide flexible and creative testing abilities
@@ -49,7 +65,8 @@ https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snipp
 
 ###TODO
 
-1. Product info, title , name, logo
+1. add git hook for the commit message
+2. Product info, title , name, logo
 4. serviceworkers
 5. test
 6. code split on need basis
