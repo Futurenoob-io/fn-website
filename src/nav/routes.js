@@ -1,19 +1,52 @@
+import Home from '../container/Home';
 import Product from '../container/Product';
 import News from '../container/News';
 import Hackathon from '../container/Hackathon';
-import Logout from '../container/Logout';
-import Login from '../container/Login';
-import Home from '../container/Home';
+import About from '../container/News';
+import SingnUp from '../container/auth/SignUp';
+import SignIn from '../container/auth/SignIn';
+import SignOut from '../container/auth/SignOut';
+import ForgotPassword from '../container/auth/ForgotPassword';
+import ChangePassword from '../container/auth/ChangePassword';
+import UnSubscribeMe from '../container/auth/UnSubscribeMe';
 
-const routes = [
+const authenticationRoutes = [
 	{
-		path: '/',
-		name: 'Login',
-		component: Login,
+		path: '/signUp',
+		name: 'Sign Up',
+		component: SingnUp
+	},
+	{
+		path: '/signIn',
+		name: 'Sign In',
+		component: SignIn
+	},
+	{
+		path: '/signOut',
+		name: 'Sign Out',
+		component: SignOut
+	},
+	{
+		path: '/forgotPassword',
+		name: 'Forgot Password',
+		component: ForgotPassword,
 		isNonMenuItem: true
 	},
 	{
-		path: '/Home',
+		path: '/changePassword',
+		name: 'Change Password',
+		component: ChangePassword
+	},
+	{
+		path: '/UnSubscribMe',
+		name: 'Un Subscribe Me',
+		component: UnSubscribeMe
+	}
+];
+
+const generalRoutes = [
+	{
+		path: '/',
 		name: 'Home',
 		component: Home
 	},
@@ -33,10 +66,11 @@ const routes = [
 		component: Hackathon
 	},
 	{
-		path: '/logout',
-		name: 'Logout',
-		component: Logout
+		path: '/About',
+		name: 'About',
+		component: About
 	}
 ];
+const routes = [ ...generalRoutes, ...authenticationRoutes ];
 
 export default routes;
