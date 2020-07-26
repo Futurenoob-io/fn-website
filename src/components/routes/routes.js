@@ -1,14 +1,14 @@
-import Home from '../container/Home';
-import Product from '../container/Product';
-import News from '../container/News';
-import Hackathon from '../container/Hackathon';
-import About from '../container/News';
-import SingnUp from '../container/auth/SignUp';
-import SignIn from '../container/auth/SignIn';
-import SignOut from '../container/auth/SignOut';
-import ForgotPassword from '../container/auth/ForgotPassword';
-import ChangePassword from '../container/auth/ChangePassword';
-import UnSubscribeMe from '../container/auth/UnSubscribeMe';
+import Home from '../../container/Home';
+import Product from '../../container/Product';
+import News from '../../container/News';
+import Hackathon from '../../container/Hackathon';
+import About from '../../container/News';
+import SingnUp from '../../container/auth/SignUp';
+import SignIn from '../../container/auth/SignIn';
+import SignOut from '../../container/auth/SignOut';
+import ForgotPassword from '../../container/auth/ForgotPassword';
+import ChangePassword from '../../container/auth/ChangePassword';
+import UnSubscribeMe from '../../container/auth/UnSubscribeMe';
 
 const authenticationRoutes = [
 	{

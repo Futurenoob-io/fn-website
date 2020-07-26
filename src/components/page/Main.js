@@ -1,10 +1,10 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import routes from '../routes/routes';
-import NotFound from '../container/NotFound';
+import NotFound from '../../container/NotFound';
 import AuthenticatedRoute from '../routes/AuthenticatedRoute';
 import UnauthenticatedRoute from '../routes/UnauthenticatedRoute';
-import { useAppContext } from '../lib/react/appContextLib';
+import { useAppContext } from '../../lib/react/appContextLib';
 
 function Main(props) {
 	const renderRoute = (route) => {

@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
+import AuthForm from '../../baseComponents/form/AuthForm';
 
-export default function unSubscribMe() {
-	return (
-		<div>
-			<h1>UnSubscribe Me</h1>
-		</div>
-	);
+export default function SignIn() {
+	const data = {
+		username: '',
+		password: ''
+	};
+
+	return <AuthForm data={data} />;
 }

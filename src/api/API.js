@@ -6,25 +6,28 @@ const axisRef = axios.create({
 });
 
 const urlMap = {
-	signIn: () => '/user/signIn',
-	signOut: () => '/user/signOut',
-	signUp: () => '/user/signUp',
-	changePassword: () => '/user/changePassword',
+	signIn: () => '/auth/signIn',
+	signOut: () => '/auth/signOut',
+	signUp: () => '/auth/signUp',
+	changePassword: () => '/auth/changePassword',
+	forgotPassword: () => '/auth/forgotPassword',
 	settings: () => '/settings'
 };
 
-const postData = ({ url, body, urlParams = {} }) => {
-	const postURL = urlMap(url);
-	return axisRef.post(postURL, body);
-};
+function postData(reqKey, body, reqParams) {
+	const postURL = urlMap[reqKey](reqParams);
+	let res;
+	try {
+		// Load async data from an inexistent endpoint.
+		return axisRef.post(postURL, body);
+	} catch (e) {
+		console.log(` Axios request failed: ${e}`);
+		return e;
+	}
+}
 
 const API = {
-	signUp: ({ userName, email, phone }) => postData({ req: 'signUp', body: { userName, email, phone } }),
-	signIn: ({ userName, email, phone }) => postData({ req: 'signIn', body: { userName, password } }),
-	signOut: ({ userName, email, phone }) => postData({ req: 'signOut', body: { userName } }),
-	changePassword: ({ userName, email, phone }) =>
-		postData({ req: 'changePassword', body: { userName, password, newPassword } }),
-	resetPassword: ({ userName }) => postData({ req: 'resetPassword', body: { userName } })
+	auth: (key, body) => postData(key, body)
 };
 
 export default API;

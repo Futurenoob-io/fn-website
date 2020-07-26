@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { createUseStyles } from 'react-jss';
-import Header from './page/Header';
-import Main from './page/Main';
-import Footer from './page/Footer';
-import { BrowserRouter as Router } from 'react-router-dom';
+import Header from './components/page/Header';
+import Main from './components/page/Main';
+import Footer from './components/page/Footer';
+import { Router } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import { AppContext } from './lib/react/appContextLib';
 

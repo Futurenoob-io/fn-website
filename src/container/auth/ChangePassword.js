@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
+import AuthForm from '../../baseComponents/form/AuthForm';
 
 export default function ChangePassword() {
-	return (
-		<div>
-			<h1>Change Password</h1>
-		</div>
-	);
+	const data = {
+		username: '',
+		current_password: '',
+		password: '',
+		new_password: ''
+	};
+
+	return <AuthForm data={data} formId={'chnagePassword'} />;
 }

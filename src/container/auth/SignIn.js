@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
+import AuthForm from '../../baseComponents/form/AuthForm';
 
 export default function SignIn() {
-	return (
-		<div>
-			<h1>SignIn</h1>
-		</div>
-	);
+	const data = {
+		username: '',
+		password: ''
+	};
+
+	return <AuthForm data={data} formId={'signIn'} />;
 }
