@@ -70,6 +70,7 @@ const generalRoutes = [
 		name: 'Home',
 		id: 'home',
 		component: Home,
+		isPublic: true,
 		isNavMenu: true
 	},
 	{
