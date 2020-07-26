@@ -4,6 +4,14 @@ import routes from '../routes/routes';
 import { createUseStyles } from 'react-jss';
 import { useAppContext } from '../../lib/react/appContextLib';
 
+const navMenuItemContent = {
+	color: '#0558F0',
+	fontWeight: 'bold',
+	fontSize: '14px',
+	lineHeight: '24px',
+	fontStyle: 'normal'
+};
+
 const useStyles = createUseStyles({
 	navMenu: {
 		display: 'flex',
@@ -17,10 +25,11 @@ const useStyles = createUseStyles({
 	navMenuItemLink: {
 		textDecoration: 'none'
 	},
-	navMenuItemContent: {
-		paddingBottom: '10px',
-		borderBottom: '2px solid blue'
-	}
+	activeNavMenuItemContent: {
+		borderBottom: '0.2px solid #0558F0',
+		...navMenuItemContent
+	},
+	navMenuItemContent
 });
 
 function NavMenu(props) {
@@ -37,7 +46,8 @@ function NavMenu(props) {
 	};
 	const listItems = (renderAll = false) =>
 		routes.map((route) => {
-			const contentClassName = activeMenuItem === route.path ? classes.navMenuItemContent : '';
+			const contentClassName =
+				activeMenuItem === route.path ? classes.activeNavMenuItemContent : classes.navMenuItemContent;
 			return (
 				canRenderRoute(route, renderAll) && (
 					<li key={route.id} className={classes.navMenuItem}>

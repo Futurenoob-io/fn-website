@@ -60,7 +60,7 @@ const validateIsNonEmtpy = (a, key) => {
 };
 const formParams = {
 	username: {
-		label: 'Email',
+		label: 'Your Email',
 		isValid: ({ username }) => validateEmail(username).isValid,
 		type: 'email'
 	},
@@ -75,7 +75,7 @@ const formParams = {
 		isValid: ({ password }) => validatePassword(password).isValid
 	},
 	new_password: {
-		type: 'password_new',
+		type: 'password',
 		label: 'Repeat New Password:',
 		isValid: ({ password, password_new }) => validatePasswords(password, password_new).isValid
 	},

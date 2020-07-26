@@ -11,15 +11,41 @@ import {
 import Button from './Button';
 import Label from './Label';
 
-export default function Auth({ data, formId, showPlaceholder = false, showLabel = true }) {
+import { createUseStyles } from 'react-jss';
+
+const useStyles = createUseStyles({
+	form: {
+		display: 'flex',
+		flexDirection: 'column'
+	},
+	singleRowForm: {
+		display: 'flex'
+	},
+	multiRowFormElement: {
+		display: 'flex',
+		flexDirection: 'column',
+		width: '250px',
+		margin: '20px 0px 20px 0'
+	}
+});
+
+export default function Auth({
+	data,
+	formId,
+	showPlaceholder = false,
+	showLabel = true,
+	actionLabel = 'Submit',
+	displayType = 'multiRow'
+}) {
+	const classes = useStyles();
 	const [ form, setValues ] = useState(data);
 	const [ isLoading, setIsLoading ] = useState({});
 	const [ errors, setErrors ] = useState({});
 
+	const formRowClassName = displayType === 'multiRow' ? classes.multiRowFormElement : '';
+
 	function validateForm() {
-		const isValid = (key) => {
-			return formParams[key]['isValid'](form);
-		};
+		const isValid = (key) => formParams[key]['isValid'](form);
 		return Object.keys(data).every(isValid);
 	}
 
@@ -49,9 +75,9 @@ export default function Auth({ data, formId, showPlaceholder = false, showLabel 
 
 		if (index === 0) autofocus = true;
 		return (
-			<div key={inputKey}>
+			<div key={inputKey} className={formRowClassName}>
 				{showLabel && <Label label={label} value={inputKey} htmlFor={inputKey} />}
-				{type === 'password' ? (
+				{type ? (
 					<input
 						value={formInputValue}
 						name={inputKey}
@@ -74,10 +100,12 @@ export default function Auth({ data, formId, showPlaceholder = false, showLabel 
 	}
 
 	const listItems = Object.keys(data).map(RenderInputValue);
+	const formClassName = displayType === 'multiRow' ? classes.singleform : classes.singleRowForm;
+
 	return (
-		<form onSubmit={handleSubmit}>
+		<form onSubmit={handleSubmit} className={formClassName}>
 			{listItems}
-			<Button isDisabled={!validateForm()} isLoading={isLoading} label={'Submit'} />
+			<Button isDisabled={!validateForm()} isLoading={isLoading} label={actionLabel} />
 		</form>
 	);
 }

@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import AuthForm from '../../baseComponents/form/AuthForm';
 
-export default function SignIn() {
+export default function SignUp() {
 	const data = {
-		firstname: '',
-		lastname: '',
 		username: ''
 	};
 
-	return <AuthForm data={data} formId={'signUp'} />;
+	return (
+		<AuthForm data={data} formId={'signUp'} actionLabel={'Sign Up'} showLabel={false} displayType={'singleRow'} />
+	);
 }
