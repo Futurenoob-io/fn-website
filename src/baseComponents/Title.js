@@ -1,17 +1,30 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 
+const titleStyle = {
+	fontWeigth: 'bold'
+};
+
 const useStyles = createUseStyles({
-	secondaryFormTitle: {
+	primaryTitle: titleStyle,
+	secondaryTitle: {
 		color: '#fff',
-		fontWeigth: 'bold'
+		...titleStyle
+	},
+	tertiaryTitle: {
+		color: '#0558F0',
+		margin: '0 150px 0 150px',
+		...titleStyle
 	}
 });
 
-function Title({ title, type = 'formTitle' }) {
+function Title({ title, type = 'formTitle', color = 'primary' }) {
 	const classes = useStyles();
+	let className = classes.primaryTitle;
+	if (color === 'secondary') className = classes.secondaryTitle;
+	if (color === 'tertiary') className = classes.tertiaryTitle;
 
-	return <h4 className={classes.secondaryFormTitle}>{title}</h4>;
+	return <h4 className={className}>{title}</h4>;
 }
 
 export default Title;

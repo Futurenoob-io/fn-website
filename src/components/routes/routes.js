@@ -1,14 +1,11 @@
-import Home from '../../container/Home';
-import Product from '../../container/Product';
-import News from '../../container/News';
-import Hackathon from '../../container/Hackathon';
-import About from '../../container/News';
 import SingnUp from '../../container/auth/SignUp';
 import SignIn from '../../container/auth/SignIn';
 import SignOut from '../../container/auth/SignOut';
 import ForgotPassword from '../../container/auth/ForgotPassword';
 import ChangePassword from '../../container/auth/ChangePassword';
 import UnSubscribeMe from '../../container/auth/UnSubscribeMe';
+import mainNavigation from '../../data/general/mainNavigation';
+import NotFound from '../../container/NotFound';
 
 const authenticationRoutes = [
 	{
@@ -64,47 +61,17 @@ const authenticationRoutes = [
 	}
 ];
 
-const generalRoutes = [
+const notFoundRoute = [
 	{
-		path: '/',
-		name: 'Home',
-		id: 'home',
-		component: Home,
-		isPublic: true,
-		isNavMenu: true
-	},
-	{
-		path: '/Product',
-		name: 'Product',
-		id: 'product',
-		component: Product,
-		isNavMenu: true
-	},
-	{
-		path: '/News',
-		name: 'News',
-		id: 'news',
-		component: News,
-		isPublic: true,
-		isNavMenu: true
-	},
-	{
-		path: '/hackathon',
-		name: 'Hackathon',
-		id: 'hackathon',
-		component: Hackathon,
-		isPublic: true,
-		isNavMenu: true
-	},
-	{
-		path: '/About',
-		name: 'About',
-		id: 'about',
-		component: About,
-		isPublic: true,
-		isNavMenu: true
+		path: '',
+		name: 'Not Found',
+		component: NotFound,
+		id: 'notFound',
+		isPublic: true
 	}
 ];
-const routes = [ ...generalRoutes, ...authenticationRoutes ];
+
+const routes = [ ...mainNavigation, ...authenticationRoutes, ...notFoundRoute ];
 
 export default routes;
+export { mainNavigation, authenticationRoutes, notFoundRoute };

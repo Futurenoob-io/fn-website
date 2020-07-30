@@ -16,7 +16,9 @@ import { createUseStyles } from 'react-jss';
 const useStyles = createUseStyles({
 	form: {
 		display: 'flex',
-		flexDirection: 'column'
+		flexDirection: 'column',
+		flex: 1,
+		alignItems: 'center'
 	},
 	singleRowForm: {
 		display: 'flex'

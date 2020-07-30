@@ -4,7 +4,8 @@ import { createUseStyles } from 'react-jss';
 const useStyles = createUseStyles({
 	container: {
 		background: 'linear-gradient(0deg, #001D90, #001D90), linear-gradient(0deg, #EBEBEB, #EBEBEB), #EBEBEB',
-		borderRadius: '6px'
+		borderRadius: '6px',
+		color: '#fff'
 	}
 });
 

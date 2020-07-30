@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import routes from '../routes/routes';
+import { mainNavigation } from '../routes/routes';
 import { createUseStyles } from 'react-jss';
 import { useAppContext } from '../../lib/react/appContextLib';
 
@@ -38,18 +38,17 @@ function NavMenu(props) {
 
 	const [ activeMenuItem, setActiveMenuItem ] = useState('/SignIn');
 
-	const canRenderRoute = (route, renderAll) => {
-		if (renderAll) return true;
+	const canRenderRoute = (route) => {
 		if (!route.isNavMenu) return false;
 		if (route.isPublic) return true;
 		return isAuthenticated;
 	};
-	const listItems = (renderAll = false) =>
-		routes.map((route) => {
+	const listItems = (data) =>
+		data.map((route) => {
 			const contentClassName =
 				activeMenuItem === route.path ? classes.activeNavMenuItemContent : classes.navMenuItemContent;
 			return (
-				canRenderRoute(route, renderAll) && (
+				canRenderRoute(route) && (
 					<li key={route.id} className={classes.navMenuItem}>
 						<NavLink
 							to={route.path}
@@ -74,10 +73,7 @@ function NavMenu(props) {
 		});
 	return (
 		<nav>
-			<ul className={classes.navMenu}>{listItems()}</ul>
-
-			<h3>TDODO: REMOVE </h3>
-			<ul>{listItems(true)}</ul>
+			<ul className={classes.navMenu}>{listItems(mainNavigation)}</ul>
 		</nav>
 	);
 }

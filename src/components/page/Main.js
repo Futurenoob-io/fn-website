@@ -1,6 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import routes from '../routes/routes';
+import { mainNavigation, authenticationRoutes, notFoundRoute } from '../routes/routes';
 import NotFound from '../../container/NotFound';
 import AuthenticatedRoute from '../routes/AuthenticatedRoute';
 import UnauthenticatedRoute from '../routes/UnauthenticatedRoute';
@@ -18,13 +19,16 @@ function Main(props) {
 		);
 	};
 
-	const routesList = routes.map(renderRoute);
+	const navRoutesList = mainNavigation.map(renderRoute);
+	const authRoutesList = authenticationRoutes.map(renderRoute);
+	const NotFoundComponent = notFoundRoute[0].component;
 	return (
 		<main>
 			<Switch>
-				{routesList}
+				{navRoutesList}
+				{authRoutesList}
 				<Route>
-					<NotFound />
+					<NotFoundComponent />
 				</Route>
 			</Switch>
 		</main>
