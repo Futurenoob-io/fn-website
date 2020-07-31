@@ -8,8 +8,8 @@ import {
 	validateIsNonEmtpy,
 	formParams
 } from '../../lib/js/formHelpers';
-import Button from './Button';
-import Label from './Label';
+import Button from '../Button';
+import Label from '../Label';
 
 import { createUseStyles } from 'react-jss';
 
