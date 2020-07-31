@@ -4,6 +4,7 @@ import SignOut from '../../container/auth/SignOut';
 import ForgotPassword from '../../container/auth/ForgotPassword';
 import ChangePassword from '../../container/auth/ChangePassword';
 import UnSubscribeMe from '../../container/auth/UnSubscribeMe';
+import StylesContainer from '../../container/StylesContainer';
 import mainNavigation from '../../data/general/mainNavigation';
 import NotFound from '../../container/NotFound';
 
@@ -54,10 +55,17 @@ const authenticationRoutes = [
 		component: ChangePassword
 	},
 	{
-		path: '/UnSubscribMe',
+		path: '/unSubscribMe',
 		name: 'Un Subscribe Me',
 		id: 'unsubscribeMe',
 		component: UnSubscribeMe
+	},
+	{
+		path: '/stylesContainer',
+		name: 'StylesContainer',
+		id: 'stylesContainer',
+		isPublic: true,
+		component: StylesContainer
 	}
 ];
 
