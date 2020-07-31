@@ -5,7 +5,7 @@ const footer = {
 	padding: '60px',
 	color: 'white',
 	display: 'flex',
-	justify: 'center'
+	justifyContent: 'center'
 };
 
 const theme = {
