@@ -5,10 +5,9 @@ import { createUseStyles } from 'react-jss';
 import { useAppContext } from '../../lib/react/appContextLib';
 
 const navMenuItemContent = {
-	color: '#0558F0',
-	fontWeight: 'bold',
-	fontSize: '14px',
-	lineHeight: '24px',
+	color: '#000000',
+	fontWeight: '500',
+	fontSize: '24px',
 	fontStyle: 'normal'
 };
 
