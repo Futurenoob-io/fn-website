@@ -21,7 +21,7 @@ const useStyles = createUseStyles({
 	}
 });
 
-function MediaObject2({ id, imgSrc, imgAlt = '', heading, subHeading, description, imageDirection = left }) {
+function MediaObject({ id, imgSrc, imgAlt = '', heading, subHeading, description, imageDirection = left }) {
 	const classes = useStyles();
 
 	return (
