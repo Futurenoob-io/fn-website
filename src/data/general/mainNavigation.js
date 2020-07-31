@@ -1,7 +1,6 @@
 import Home from '../../container/Home';
-import Product from '../../container/Product';
+import Platform from '../../container/Platform';
 import Hackathon from '../../container/Hackathon';
-import News from '../../container/News';
 import About from '../../container/About';
 
 const mainNavigation = [
@@ -14,10 +13,10 @@ const mainNavigation = [
 		isNavMenu: true
 	},
 	{
-		path: '/Product',
-		name: 'Product',
-		id: 'product',
-		component: Product,
+		path: '/platform',
+		name: 'Platform',
+		id: 'Platform',
+		component: Platform,
 		isPublic: true,
 		isNavMenu: true
 	},
@@ -29,15 +28,6 @@ const mainNavigation = [
 		isPublic: true,
 		isNavMenu: true
 	},
-	{
-		path: '/News',
-		name: 'News',
-		id: 'news',
-		component: News,
-		isPublic: true,
-		isNavMenu: true
-	},
-
 	{
 		path: '/About',
 		name: 'About',
