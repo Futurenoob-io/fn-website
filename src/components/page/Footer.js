@@ -1,18 +1,20 @@
 import React from 'react';
+import { createUseStyles } from 'react-jss';
 import CopyRights from './CopyRights';
 import theme from '../../styles/theme';
-import { createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles({
 	footer: theme.footer,
-	logo: {},
+	logo: {
+		flexGrow: '3'
+	},
 	section: {
-		display: 'flex',
-		justifyContent: 'center',
-		margin: '5px'
+		flexGrow: '2',
+		margin: '4px'
 	},
 	signUpSection: {
-		flexGrow: '1',
+		flexGrow: '2',
+		width: '33%',
 		display: 'flex',
 		justifyContent: 'center'
 	}
