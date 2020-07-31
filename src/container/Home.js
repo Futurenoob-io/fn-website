@@ -14,13 +14,13 @@ const wrapper = {
 
 const useStyles = createUseStyles({
 	container: {
-		background: 'linear-gradient(180deg, #FFFFFF 72.3%, rgba(5, 88, 240, 0.65) 100%)',
-		boxShadow: '0px 4px 80px rgba(0, 0, 0, 0.25)',
+		background: '',
+		boxShadow: '',
 		...wrapper
 	},
 	signUpContainer: {
-		background: 'linear-gradient(180deg, #0558F0 10.42%, rgba(20, 0, 255, 0.6) 100%)',
-		boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+		background: '',
+		boxShadow: '',
 		...wrapper
 	}
 });
