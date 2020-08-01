@@ -18,7 +18,8 @@ const useStyles = createUseStyles({
 		margin: '0 50px 0 50px'
 	},
 	cardImage: {
-		...centerIt
+		...centerIt,
+		flex: 1
 	},
 	cardContent: {
 		flex: 1,
