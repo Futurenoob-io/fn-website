@@ -1,20 +1,21 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
+import Logo from '../images/Logo';
 
 const useStyles = createUseStyles({
 	card: {
 		display: 'flex',
 		alignItems: 'flexStart',
-		background: '#F6F3EB',
 		padding: '1em',
 		borderRadius: '3px',
-		maxWidth: '24em'
+		margin: '0 50px 0 50px'
 	},
 	cardImage: {
-		marginRight: '1em'
+		margin: '1em'
 	},
 	cardContent: {
-		flex: 1
+		flex: 1,
+		margin: '40px'
 	},
 	cardTitle: {
 		margin: '0 0 .5em'
@@ -27,12 +28,21 @@ const useStyles = createUseStyles({
 	}
 });
 
-function MediaObject({ id, imgSrc, imgAlt = '', title, subTitle, description, imageDirection = left }) {
+function MediaObject({
+	id,
+	imgSrc,
+	imgAlt = '',
+	title,
+	subTitle,
+	description,
+	imageDirection = 'left',
+	backgroundColor = '#F6F3EB'
+}) {
 	const classes = useStyles();
 
 	return (
-		<div key={id} className={classes.card}>
-			<img className={classes.cardImage} src={imgSr} alt={imgAlt} />
+		<div key={id} className={classes.card} style={{ backgroundColor }}>
+			<Logo />
 			<div className={classes.cardContent}>
 				<h3 className={classes.cardTitle}>{title}</h3>
 				<h3 className={classes.cardSubTitle}>{subTitle}</h3>

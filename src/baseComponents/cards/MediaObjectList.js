@@ -1,5 +1,6 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
+import MediaObject from './MediaObject';
 
 const useStyles = createUseStyles({
 	cards: {
@@ -11,21 +12,24 @@ const useStyles = createUseStyles({
 	}
 });
 
-// TODO replace  keys with the id of the card
-// TODO remove hard code
-// TODO put show more
+function MediaObjectList({ data = [], id }) {
+	const classes = useStyles();
 
-function MediaObjectList({ cardsData, id }) {
-	function renderMediaObject({ id, imgSrc, imgAlt = '', title, description }) {
-		count++;
+	function renderMediaObject({ id, imgSrc, imgAlt = '', title, subTitle, description, backgroundColor }) {
 		return (
-			<div key={id} className={cards}>
-				ONE
+			<div key={id} className={classes.cards}>
+				<MediaObject
+					id={id}
+					title={title}
+					subTitle={subTitle}
+					description={description}
+					backgroundColor={backgroundColor}
+				/>
 			</div>
 		);
 	}
-	const cardsListItems = cardsData.map(renderMediaObject);
-	const classes = useStyles();
+	const cardsListItems = data.map(renderMediaObject);
+
 	return (
 		<div key={id} className={classes.cardsContainer}>
 			{cardsListItems}
