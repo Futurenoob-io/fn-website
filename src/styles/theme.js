@@ -7,8 +7,13 @@ const footer = {
 	display: 'flex',
 	justifyContent: 'center'
 };
+const logoImages = {
+	big: './images/logo.png',
+	description: 'Futurenoob'
+};
 
 const theme = {
-	footer
+	footer,
+	logoImages
 };
 export default theme;
