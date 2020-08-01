@@ -25,10 +25,13 @@ module.exports = {
 				use: 'babel-loader'
 			},
 			{
-				test: /\.(png|jpe?g|gif)$/i,
+				test: /\.(png|jp(e*)g|svg|gif)$/,
 				use: [
 					{
-						loader: 'file-loader'
+						loader: 'file-loader',
+						options: {
+							name: 'images/[hash]-[name].[ext]'
+						}
 					}
 				]
 			}
