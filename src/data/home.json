@@ -2,6 +2,19 @@
 	"home": {
 		"title": "Future of game development begins now!",
 		"subTitle": "FUTURENOOB offers Platform as a Service with turn-key solutions across hardware, software and expertise to game development companies and individuals that are starting or scaling up.",
-		"signUpTitle": "Ready to see what we are building?"
+		"signUpTitle": "Ready to see what we are building?",
+		"mainCards": [
+			{
+				"title": "Title",
+				"subTitle": "Sub Title",
+				"description": "XXXXXXXX",
+				"imageDirection": "right"
+			},
+			{
+				"title": "Title",
+				"subTitle": "Sub Title",
+				"description": "XXXXXXXX"
+			}
+		]
 	}
 }
