@@ -13,12 +13,13 @@ const useStyles = createUseStyles({
 	},
 	tertiaryTitle: {
 		color: '#0558F0',
-		margin: '0 150px 0 150px',
+		//margin: '0 150px 0 150px',
 		...titleStyle
 	}
 });
 
 function Title({ title, type = 'formTitle', color = 'primary' }) {
+	// TODO use classnames here and update this part
 	const classes = useStyles();
 	let className = classes.primaryTitle;
 	if (color === 'secondary') className = classes.secondaryTitle;
