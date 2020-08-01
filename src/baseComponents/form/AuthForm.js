@@ -51,7 +51,7 @@ export default function Auth({
 		return Object.keys(data).every(isValid);
 	}
 
-	function updateField(e) {
+	function handleFieldChange(e) {
 		const value = e.target.value;
 		setValues({
 			...form,
@@ -66,7 +66,7 @@ export default function Auth({
 		try {
 			API.auth(formId, form).then().catch((e) => console.log(e));
 		} catch (error) {
-			console.log(e);
+			console.log(error);
 		}
 	}
 	function RenderInputValue(inputKey, index) {
@@ -84,7 +84,7 @@ export default function Auth({
 						value={formInputValue}
 						name={inputKey}
 						type={inputKey}
-						onChange={updateField}
+						onChange={handleFieldChange}
 						autoFocus={autofocus}
 						placeholder={label}
 					/>
@@ -92,7 +92,7 @@ export default function Auth({
 					<input
 						value={formInputValue}
 						name={inputKey}
-						onChange={updateField}
+						onChange={handleFieldChange}
 						autoFocus={autofocus}
 						placeholder={label}
 					/>
