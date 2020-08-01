@@ -4,7 +4,6 @@ import MediaObject from './MediaObject';
 
 const useStyles = createUseStyles({
 	cards: {
-		maxWidth: '1200px',
 		margin: '0 auto',
 		display: 'grid',
 		gridGap: '1rem',
