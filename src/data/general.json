@@ -3,21 +3,21 @@
 		"legal": [
 			{
 				"id": "legal1",
-				"title": "Title 1",
-				"description": "Sub Title 1",
-				"link": "www.google.com"
+				"title": "Terms & Conditions",
+				"description": "Terms & Conditions",
+				"link": "http://google.com"
 			},
 			{
 				"id": "legal2",
-				"title": "Title 2",
+				"title": "Data Handling",
 				"description": "Sub Title 1",
-				"link": "www.yahoo.com"
+				"link": "http://google.com"
 			},
 			{
 				"id": "legal3",
-				"title": "Title 3",
+				"title": "Something",
 				"description": "Sub Title 3",
-				"link": "www.youtube.com"
+				"link": "http://google.com"
 			}
 		]
 	}
