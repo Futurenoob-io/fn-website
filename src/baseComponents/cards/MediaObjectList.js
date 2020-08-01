@@ -4,10 +4,7 @@ import MediaObject from './MediaObject';
 
 const useStyles = createUseStyles({
 	cards: {
-		margin: '0 auto',
-		display: 'grid',
-		gridGap: '1rem',
-		gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))'
+		margin: '0 150px'
 	}
 });
 
