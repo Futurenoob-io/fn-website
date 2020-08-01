@@ -14,8 +14,8 @@ const useStyles = createUseStyles({
 		display: 'flex',
 		alignItems: 'flexStart',
 		padding: '1em',
-		borderRadius: '3px',
-		margin: '0 50px 0 50px'
+		borderRadius: '3px'
+		//margin: '0 50px 0 50px'
 	},
 	cardImage: {
 		...centerIt,

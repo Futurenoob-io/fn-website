@@ -4,7 +4,7 @@ import MediaObject from './MediaObject';
 
 const useStyles = createUseStyles({
 	cards: {
-		margin: '0 150px'
+		//margin: '0 150px'
 	}
 });
 
