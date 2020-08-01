@@ -4,7 +4,7 @@ import CopyRights from './CopyRights';
 import Image from '../../baseComponents/Image';
 import theme from '../../styles/theme';
 import SignUp from '../../container/auth/SignUp';
-
+import Logo from '../../baseComponents/images/Logo';
 const useStyles = createUseStyles({
 	footer: theme.footer,
 	logo: {
@@ -27,7 +27,7 @@ function Footer(props) {
 	return (
 		<footer className={classes.footer}>
 			<div className={classes.logo}>
-				<Image src={theme.logoImages.big} description={theme.logoImages.description} />
+				<Logo />
 			</div>
 			<div className={classes.section}>Company</div>
 			<div className={classes.section}>Legal</div>
