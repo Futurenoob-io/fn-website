@@ -15,7 +15,17 @@ const useStyles = createUseStyles({
 function MediaObjectList({ data = [], id }) {
 	const classes = useStyles();
 
-	function renderMediaObject({ id, imgSrc, imgAlt = '', title, subTitle, description, backgroundColor }) {
+	function renderMediaObject({
+		id,
+		imgSrc,
+		imgAlt = '',
+		title,
+		subTitle,
+		description,
+		backgroundColor,
+		imageDirection
+	}) {
+		console.log(imageDirection);
 		return (
 			<div key={id} className={classes.cards}>
 				<MediaObject
@@ -24,6 +34,7 @@ function MediaObjectList({ data = [], id }) {
 					subTitle={subTitle}
 					description={description}
 					backgroundColor={backgroundColor}
+					imageDirection={imageDirection}
 				/>
 			</div>
 		);

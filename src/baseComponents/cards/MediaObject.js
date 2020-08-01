@@ -1,6 +1,7 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 import Logo from '../images/Logo';
+import classNames from 'classnames';
 
 const useStyles = createUseStyles({
 	card: {
@@ -25,6 +26,9 @@ const useStyles = createUseStyles({
 	},
 	cardDescription: {
 		fontSize: '12px'
+	},
+	rightImageCard: {
+		flexDirection: 'row-reverse'
 	}
 });
 
@@ -40,8 +44,10 @@ function MediaObject({
 }) {
 	const classes = useStyles();
 
+	const cardClassName = classNames({ [classes.card]: true, [classes.rightImageCard]: imageDirection === 'right' });
+
 	return (
-		<div key={id} className={classes.card} style={{ backgroundColor }}>
+		<div key={id} className={cardClassName} style={{ backgroundColor }}>
 			<Logo />
 			<div className={classes.cardContent}>
 				<h3 className={classes.cardTitle}>{title}</h3>
