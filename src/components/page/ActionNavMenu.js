@@ -15,8 +15,8 @@ function ActionNavMenu() {
 
 	return (
 		<div>
-			<Button key="login" label={'login'} onClick={'handleLogin'} />
-			<Button key="earlyAccess" label={'get early access'} onClick={'getEarlyAccess'} />
+			<Button key="login" label={'login'} onClick={handleLogin} />
+			<Button key="earlyAccess" label={'get early access'} onClick={getEarlyAccess} />
 		</div>
 	);
 }
