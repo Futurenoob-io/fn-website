@@ -3,6 +3,12 @@ import { createUseStyles } from 'react-jss';
 import Logo from '../images/Logo';
 import classNames from 'classnames';
 
+const centerIt = {
+	display: 'flex',
+	alignItems: 'center',
+	justifyContent: 'center'
+};
+
 const useStyles = createUseStyles({
 	card: {
 		display: 'flex',
@@ -12,13 +18,13 @@ const useStyles = createUseStyles({
 		margin: '0 50px 0 50px'
 	},
 	cardImage: {
-		display: 'flex',
-		alignItems: 'center',
-		justifyContent: 'center'
+		...centerIt
 	},
 	cardContent: {
 		flex: 1,
-		margin: '40px'
+		margin: '40px',
+		display: 'flex',
+		flexDirection: 'column'
 	},
 	cardTitle: {
 		margin: '0 0 .5em'
