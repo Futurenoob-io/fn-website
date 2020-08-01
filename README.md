@@ -78,7 +78,6 @@ https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snipp
 9. ignores
 10. deploy
 11. uuid
-12. storybook
 13. code of conduct
 14 . path names
 15. env variables
@@ -87,7 +86,7 @@ https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snipp
 18. create a github repo add steps
 19 analytics
 20. error handling
-21. test coverage
+21. test (********)
 22. performance
 23. internatalization
 24. theme
