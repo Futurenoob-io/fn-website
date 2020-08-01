@@ -28,13 +28,5 @@ const useStyles = createUseStyles({
 export default function Home() {
 	const classes = useStyles();
 	const { signUpTitle, title, subTitle } = data.home;
-	return (
-		<div>
-			<div className={classes.container}>
-				<Title title={title} color="tertiary" />
-				<Title title={subTitle} color="tertiary" />
-			</div>
-			<SignUp signUpTitle={signUpTitle} className={classes.signUpContainer} />
-		</div>
-	);
+	return <div>homes</div>;
 }
