@@ -4,6 +4,11 @@ import { mainNavigation } from '../routes/routes';
 import { createUseStyles } from 'react-jss';
 import { useAppContext } from '../../lib/react/appContextLib';
 
+const activeStyle = {
+	fontWeight: 'bold',
+	color: 'red'
+};
+
 const navMenuItemContent = {
 	color: '#000000',
 	fontWeight: '500',
@@ -42,33 +47,29 @@ function NavMenu(props) {
 		if (route.isPublic) return true;
 		return isAuthenticated;
 	};
+	function renderRoute(route) {
+		const { id, path: to, name: linkText } = route;
+		const contentClassName = activeMenuItem === to ? classes.activeNavMenuItemContent : classes.navMenuItemContent;
+
+		function isActive(match, location) {
+			if (!match) {
+				return false;
+			}
+			setActiveMenuItem(to);
+			return location.pathname === to;
+		}
+
+		return (
+			<li key={id} className={classes.navMenuItem}>
+				<NavLink to={to} className={classes.navMenuItemLink} isActive={isActive} activeStyle={activeStyle}>
+					<span className={contentClassName}>{linkText}</span>
+				</NavLink>
+			</li>
+		);
+	}
 	const listItems = (data) =>
 		data.map((route) => {
-			const contentClassName =
-				activeMenuItem === route.path ? classes.activeNavMenuItemContent : classes.navMenuItemContent;
-			return (
-				canRenderRoute(route) && (
-					<li key={route.id} className={classes.navMenuItem}>
-						<NavLink
-							to={route.path}
-							className={classes.navMenuItemLink}
-							isActive={(match, location) => {
-								if (!match) {
-									return false;
-								}
-								setActiveMenuItem(route.path);
-								return location.pathname === route.path;
-							}}
-							activeStyle={{
-								fontWeight: 'bold',
-								color: 'red'
-							}}
-						>
-							<span className={contentClassName}>{route.name}</span>
-						</NavLink>
-					</li>
-				)
-			);
+			return canRenderRoute(route) && renderRoute(route);
 		});
 	return (
 		<nav>
