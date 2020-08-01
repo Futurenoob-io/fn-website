@@ -19,7 +19,7 @@ const useStyles = createUseStyles({
 	cardTitle: {
 		margin: '0 0 .5em'
 	},
-	cardSubHeading: {
+	cardSubTitle: {
 		fontSize: '14px'
 	},
 	cardDescription: {
@@ -27,15 +27,15 @@ const useStyles = createUseStyles({
 	}
 });
 
-function MediaObject({ id, imgSrc, imgAlt = '', heading, subHeading, description, imageDirection = left }) {
+function MediaObject({ id, imgSrc, imgAlt = '', title, subTitle, description, imageDirection = left }) {
 	const classes = useStyles();
 
 	return (
 		<div key={id} className={classes.card}>
 			<img className={classes.cardImage} src={imgSr} alt={imgAlt} />
 			<div className={classes.cardContent}>
-				<h3 className={classes.cardTitle}>{heading}</h3>
-				<h3 className={classes.cardSubHeading}>{subHeading}</h3>
+				<h3 className={classes.cardTitle}>{title}</h3>
+				<h3 className={classes.cardSubTitle}>{subTitle}</h3>
 				<p className={classes.cardDescription}>{description}</p>
 			</div>
 		</div>
