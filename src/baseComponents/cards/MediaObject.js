@@ -12,7 +12,9 @@ const useStyles = createUseStyles({
 		margin: '0 50px 0 50px'
 	},
 	cardImage: {
-		margin: '1em'
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'center'
 	},
 	cardContent: {
 		flex: 1,
@@ -29,6 +31,9 @@ const useStyles = createUseStyles({
 	},
 	rightImageCard: {
 		flexDirection: 'row-reverse'
+	},
+	leftTopOutsideImageCard: {
+		marginTop: '-100px'
 	}
 });
 
@@ -39,16 +44,26 @@ function MediaObject({
 	title,
 	subTitle,
 	description,
-	imageDirection = 'left',
+	imageDirection = 'leftTopOutsideImage',
 	backgroundColor = '#F6F3EB'
 }) {
 	const classes = useStyles();
 
-	const cardClassName = classNames({ [classes.card]: true, [classes.rightImageCard]: imageDirection === 'right' });
+	const cardClassName = classNames({
+		[classes.card]: true,
+		[classes.rightImageCard]: imageDirection === 'right'
+	});
+
+	const cardImageClassName = classNames({
+		[classes.cardImage]: imageDirection === 'right' || imageDirection === 'left',
+		[classes.leftTopOutsideImageCard]: imageDirection === 'leftTopOutsideImage'
+	});
 
 	return (
 		<div key={id} className={cardClassName} style={{ backgroundColor }}>
-			<Logo />
+			<div className={cardImageClassName}>
+				<Logo />
+			</div>
 			<div className={classes.cardContent}>
 				<h3 className={classes.cardTitle}>{title}</h3>
 				<h3 className={classes.cardSubTitle}>{subTitle}</h3>

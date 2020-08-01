@@ -21,7 +21,6 @@ function MediaObjectList({ data = [], id }) {
 		backgroundColor,
 		imageDirection
 	}) {
-		console.log(imageDirection);
 		return (
 			<div key={id} className={classes.cards}>
 				<MediaObject
