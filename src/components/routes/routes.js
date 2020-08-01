@@ -5,7 +5,7 @@ import ForgotPassword from '../../container/auth/ForgotPassword';
 import ChangePassword from '../../container/auth/ChangePassword';
 import UnSubscribeMe from '../../container/auth/UnSubscribeMe';
 import StylesContainer from '../../container/StylesContainer';
-import mainNavigation from '../../data/general/mainNavigation';
+import mainNavigation from '../../data/nav/mainNavigation';
 import NotFound from '../../container/NotFound';
 
 const authenticationRoutes = [
