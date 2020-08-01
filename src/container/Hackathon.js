@@ -8,7 +8,7 @@ function registrationForm() {
 		username: ''
 	};
 
-	return <AuthForm data={data} />;
+	return <AuthForm data={data} formId={'signIn'} />;
 }
 
 export default function Hackathon() {
