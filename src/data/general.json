@@ -3,22 +3,25 @@
 		"legal": [
 			{
 				"id": "legal1",
-				"title": "Terms & Conditions",
-				"description": "Terms & Conditions",
+				"title": "Title 1",
+				"description": "Sub Title 1",
 				"link": "http://google.com"
 			},
 			{
 				"id": "legal2",
 				"title": "Data Handling",
 				"description": "Sub Title 1",
-				"link": "http://google.com"
+				"link": "http://yahoo.com"
 			},
 			{
 				"id": "legal3",
 				"title": "Something",
 				"description": "Sub Title 3",
-				"link": "http://google.com"
+				"link": "http://youtube.com"
 			}
-		]
+		],
+		"signUp": {
+			"title": "Sign up for updates, special offers and keep \n informed about all our upcoming events"
+		}
 	}
 }

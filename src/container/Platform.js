@@ -1,6 +1,6 @@
 import React from 'react';
 import MediaObjectList from '../baseComponents/cards/MediaObjectList';
-import data from '../data/platform.json';
+import data from '../data/platform';
 
 export default function Platform() {
 	const mainCards = data.platform.mainCards;

@@ -1,6 +1,21 @@
 import React from 'react';
+import { createUseStyles } from 'react-jss';
+import classNames from 'classnames';
 
-function Image({ src, description, type }) {
-	return <img src={src} alt={description} />;
+const useStyles = createUseStyles({
+	large:{
+		width: '531px',
+		height: '398px'
+	},
+	medium:{
+
+	},
+	small:{
+
+	}
+})
+function Image({ src, description, type='large' }) {
+	const classes= useStyles();
+	return <img className={classes[type]} src={src} alt={description} />;
 }
 export default Image;

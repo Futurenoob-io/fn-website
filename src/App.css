@@ -1,1 +1,47 @@
 
+
+/* //TODO add font style */
+@font-face{
+    src: url('styles/fonts/Menco-Black.otf');
+    font-family: 'MencoBlack'
+}
+@font-face{
+    src: url('styles/fonts/Menco-BlackItalic.otf');
+    font-family: 'MencoItalic'
+}
+@font-face{
+    src: url('styles/fonts/Menco-BlackItalic.otf');
+    font-family: 'MencoItalic'
+}
+@font-face{
+    src: url('styles/fonts/Menco-Bold.otf');
+    font-family: 'MencoBold'
+}
+@font-face{
+    src: url('styles/fonts/Menco-BoldItalic.otf');
+    font-family: 'MencoBoldItalic'
+}
+@font-face{
+    src: url('styles/fonts/Menco-Light.otf');
+    font-family: 'MencoLight'
+}
+@font-face{
+    src: url('styles/fonts/Menco-LightItalic.otf');
+    font-family: 'MencoLightItalic'
+}
+@font-face{
+    src: url('styles/fonts/Menco-Medium.otf');
+    font-family: 'MencoMedium'
+}
+@font-face{
+    src: url('styles/fonts/Menco-MediumItalic.otf');
+    font-family: 'MencoMediumItalic'
+}
+@font-face{
+    src: url('styles/fonts/Menco-Thin.otf');
+    font-family: 'MencoThin'
+}
+@font-face{
+    src: url('styles/fonts/Menco-ThinItalic.otf');
+    font-family: 'MencoThinItalic'
+}

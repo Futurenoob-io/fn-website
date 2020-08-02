@@ -2,7 +2,15 @@ import React from 'react';
 import { createUseStyles } from 'react-jss';
 
 const titleStyle = {
-	fontWeigth: 'bold'
+	fontWeigth: 'bold',
+	fontFamily: 'MencoMedium',
+    fontStyle: 'normal',
+    fontWeight: '500',
+    fontSize: '24px',
+    lineHeight: '31px',
+    textAlign: 'center',
+	marginTop: '5px',
+	marginBottom: '24px'
 };
 
 const useStyles = createUseStyles({

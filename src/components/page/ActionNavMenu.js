@@ -5,18 +5,19 @@ import Button from '../../baseComponents/Button';
 
 const useStyles = createUseStyles({
 	actionNavMenu: {
-		display: 'flex'
+		marginTop: '27px' 
 	}
 });
 
 function ActionNavMenu() {
 	const handleLogin = () => alert('handle this');
 	const getEarlyAccess = () => alert('handle this');
+	const classes = useStyles();
 
 	return (
-		<div>
-			<Button key="login" label={'login'} onClick={handleLogin} />
-			<Button key="earlyAccess" label={'get early access'} onClick={getEarlyAccess} />
+		<div className={classes.actionNavMenu}>
+			<Button key="login" type="primary" label={'Log In'} onClick={handleLogin} />
+			<Button key="earlyAccess" type="secondary" label={'Get Early Access'} onClick={getEarlyAccess} />
 		</div>
 	);
 }

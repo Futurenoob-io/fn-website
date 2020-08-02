@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { mainNavigation } from '../routes/routes';
 import { createUseStyles } from 'react-jss';
 import { useAppContext } from '../../lib/react/appContextLib';
+import NavList from '../../baseComponents/NavList';
 
 const activeStyle = {
 	fontWeight: 'bold',
@@ -13,7 +14,9 @@ const navMenuItemContent = {
 	color: '#000000',
 	fontWeight: '500',
 	fontSize: '24px',
-	fontStyle: 'normal'
+	fontStyle: 'normal',
+	fontFamily: 'MencoMedium',
+	lineHeight: '31px',
 };
 
 const useStyles = createUseStyles({
@@ -24,13 +27,14 @@ const useStyles = createUseStyles({
 		padding: 0
 	},
 	navMenuItem: {
-		marginRight: '10px'
+		marginRight: '36px'
 	},
 	navMenuItemLink: {
 		textDecoration: 'none'
 	},
 	activeNavMenuItemContent: {
-		borderBottom: '0.2px solid #0558F0',
+		borderBottom: '2px solid #FF9643',
+		paddingBottom: '5px',
 		...navMenuItemContent
 	},
 	navMenuItemContent
@@ -72,9 +76,9 @@ function NavMenu(props) {
 			return canRenderRoute(route) && renderRoute(route);
 		});
 	return (
-		<nav>
-			<ul className={classes.navMenu}>{listItems(mainNavigation)}</ul>
-		</nav>
+		<NavList type='horizontal'>
+			{listItems(mainNavigation)}
+		</NavList>
 	);
 }
 export default NavMenu;

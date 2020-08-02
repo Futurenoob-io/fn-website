@@ -28,6 +28,10 @@ const useStyles = createUseStyles({
 		flexDirection: 'column',
 		width: '250px',
 		margin: '20px 0px 20px 0'
+	},
+	singleRowInput:{
+		padding: '15px 111px 15px 17px',
+		borderRadius: '100px'
 	}
 });
 
@@ -45,6 +49,7 @@ export default function Auth({
 	const [ errors, setErrors ] = useState({});
 
 	const formRowClassName = displayType === 'multiRow' ? classes.multiRowFormElement : '';
+	const formInputClassName = displayType === 'singleRow' ? classes.singleRowInput: '' ;
 
 	function validateForm() {
 		const isValid = (key) => formParams[key]['isValid'](form);
@@ -87,6 +92,7 @@ export default function Auth({
 						onChange={handleFieldChange}
 						autoFocus={autofocus}
 						placeholder={label}
+						className={formInputClassName}
 					/>
 				) : (
 					<input
@@ -95,6 +101,7 @@ export default function Auth({
 						onChange={handleFieldChange}
 						autoFocus={autofocus}
 						placeholder={label}
+						className={formInputClassName}
 					/>
 				)}
 			</div>
@@ -107,7 +114,7 @@ export default function Auth({
 	return (
 		<form onSubmit={handleSubmit} className={formClassName}>
 			{listItems}
-			<Button isDisabled={!validateForm()} isLoading={isLoading} label={actionLabel} />
+			<Button type="secondary" isDisabled={!validateForm()} isLoading={isLoading} label={actionLabel} />
 		</form>
 	);
 }

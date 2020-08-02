@@ -30,7 +30,7 @@ function TopImageCard({ id, imgSrc, imgAlt = '', title, description }) {
 
 	return (
 		<div key={id} className={classes.card}>
-			<img className={classes.cardImage} src={imgSr} alt={imgAlt} />
+			<img className={classes.cardImage} src={imgSrc} alt={imgAlt} />
 			<div className={classes.cardBody}>
 				<h3 className={classes.cardTitle}>{title}</h3>
 				<p>{description}</p>

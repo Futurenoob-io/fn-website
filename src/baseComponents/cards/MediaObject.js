@@ -1,11 +1,12 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
-import Logo from '../images/Logo';
 import classNames from 'classnames';
+import Platform1 from '../images/Platform1.svg';
+import Image from '../Image';
 
 const centerIt = {
 	display: 'flex',
-	alignItems: 'center',
+	alignItems: 'flex-start',
 	justifyContent: 'center'
 };
 
@@ -28,13 +29,27 @@ const useStyles = createUseStyles({
 		flexDirection: 'column'
 	},
 	cardTitle: {
-		margin: '0 0 .5em'
+		margin: '0 0 .5em',
+		fontFamily: 'Open Sans',
+		fontStyle: 'normal',
+		fontWeight: 'bold',
+		fontSize: '36px',
+		lineHeight: '160%'
 	},
 	cardSubTitle: {
-		fontSize: '14px'
+		fontFamily: 'MencoMedium',
+		fontStyle: 'normal',
+		fontWeight: '500',
+		fontSize: '24px',
+		lineHeight: '160%'
 	},
 	cardDescription: {
-		fontSize: '12px'
+		fontSize: '12px',
+		fontFamily: 'MencoMedium',
+		fontStyle: 'normal',
+		fontWeight: '500',
+		fontSize: '14px',
+		lineHeight: '160%'
 	},
 	rightImageCard: {
 		flexDirection: 'row-reverse'
@@ -47,6 +62,7 @@ const useStyles = createUseStyles({
 function MediaObject({
 	id,
 	imgSrc,
+	imgType,
 	imgAlt = '',
 	title,
 	subTitle,
@@ -69,7 +85,7 @@ function MediaObject({
 	return (
 		<div key={id} className={cardClassName} style={{ backgroundColor }}>
 			<div className={cardImageClassName}>
-				<Logo />
+				<Image src={imgSrc} type={imgType} />
 			</div>
 			<div className={classes.cardContent}>
 				<h3 className={classes.cardTitle}>{title}</h3>

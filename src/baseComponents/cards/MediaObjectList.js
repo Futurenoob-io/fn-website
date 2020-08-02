@@ -15,6 +15,7 @@ function MediaObjectList({ data = [], id }) {
 		id,
 		imgSrc,
 		imgAlt = '',
+		imgType,
 		title,
 		subTitle,
 		description,
@@ -30,6 +31,8 @@ function MediaObjectList({ data = [], id }) {
 					description={description}
 					backgroundColor={backgroundColor}
 					imageDirection={imageDirection}
+					imgSrc={imgSrc}
+					imgType={imgType}
 				/>
 			</div>
 		);
