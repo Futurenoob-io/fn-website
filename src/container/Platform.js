@@ -4,7 +4,7 @@ import platformData from '../data/platform';
 import CTACard from '../baseComponents/cards/CTACard';
 
 export default function Platform() {
-	const mainCards = platformData.platform.mainCards.data;
+	const mainCards = platformData.platform.mainCards;
 	const whatWeBuild = platformData.platform.readyToSeeWhatWebuild;
 	const whatWeBuildTitle = whatWeBuild.title;
 	const whatWeBuildDesc = whatWeBuild.description;

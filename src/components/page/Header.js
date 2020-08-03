@@ -23,7 +23,7 @@ function Header(props) {
 	return (
 		<header className={classes.header}>
 			<div className={classes.logoContainer}>
-				<Logo stroke="#000000" fill="none" type="header" />
+				<Logo type="header" />
 			</div>
 			<NavMenu />
 			<ActionNavMenu />

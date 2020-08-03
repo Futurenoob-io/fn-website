@@ -57,6 +57,11 @@ export default ({
 				"imgSrc": Platform5,
 				"imgType": 'large'
 			}
-		]
+		],
+		"readyToSeeWhatWebuild": {
+			"id": "platform-readyToSeeWhatWeBuild",
+			"title": "Ready to see and test out what we are building?",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac suscipit nisl. Ut et eget dolor et neque tempor sagittis aliquam magna diam, lobortis a lorem acronimu eleifend sagittis sem.."
+		}
 	}
 })
