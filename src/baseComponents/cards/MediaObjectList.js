@@ -37,6 +37,7 @@ function MediaObjectList({ data = [], id }) {
 			</div>
 		);
 	}
+	// TODOD JUSTCALL MEDIA OBJECT ...anything abpve can be avoided
 	const cardsListItems = data.map(renderMediaObject);
 
 	return (
