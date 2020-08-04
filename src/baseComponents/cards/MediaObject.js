@@ -1,9 +1,7 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
 import classNames from 'classnames';
-import Platform1 from '../images/Platform1.svg';
 import Image from '../Image';
-import getImage from '../../baseComponents/images/Image';
 
 const centerIt = {
 	display: 'flex',
@@ -71,8 +69,8 @@ function MediaObject({
 	imageDirection = 'leftTopOutsideImage',
 	backgroundColor = '#F6F3EB'
 }) {
-	console.log(id);
-	const imgSrcValue = imgSrc || getImage(id);
+	// console.log(id);
+	// const imgSrcValue = imgSrc || getImage(id);
 	const classes = useStyles();
 
 	const cardClassName = classNames({
@@ -88,7 +86,7 @@ function MediaObject({
 	return (
 		<div key={id} className={cardClassName} style={{ backgroundColor }}>
 			<div className={cardImageClassName}>
-				<Image src={imgSrcValue} type={imgType} />
+				<Image src={imgSrc} type={imgType} />
 			</div>
 			<div className={classes.cardContent}>
 				<h3 className={classes.cardTitle}>{title}</h3>

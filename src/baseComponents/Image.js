@@ -12,6 +12,10 @@ const useStyles = createUseStyles({
 	},
 	small:{
 
+	},
+	portfolio:{
+		height: '180px',
+		width: '100%'
 	}
 })
 function Image({ src, description, type='large' }) {

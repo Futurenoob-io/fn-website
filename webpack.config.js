@@ -46,16 +46,17 @@ module.exports = {
 		]
 	},
 
+	// devServer: {
+	// 	contentBase: path.resolve(__dirname, 'public'),
+	// 	port: 9000
+	// },
 	devServer: {
-		contentBase: path.resolve(__dirname, 'dist'),
-		port: 9000
-	},
-	devServer: {
-		historyApiFallback: true
+		historyApiFallback: true,
+		contentBase: path.resolve(__dirname, 'public'),
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: 'src/index.html' //source html
+			template: 'public/index.html' //source html
 		})
 	]
 };

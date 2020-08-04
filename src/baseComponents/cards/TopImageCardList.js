@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { createUseStyles } from 'react-jss';
+import TopImageCard from '../cards/TopImageCard';
 
 const useStyles = createUseStyles({
 	cards: {
@@ -16,18 +17,18 @@ let count = 0;
 // TODO put show more
 
 function TopCardList({ cardsData }) {
+	const classes = useStyles();
 	function renderTopImageCard({ id, imgSrc, imgAlt = '', title, description }) {
 		count++;
 		return (
-			<div key={count} className={cards}>
-				ONE
-			</div>
+			// <div key={count}>
+				<TopImageCard id={id} imgSrc={imgSrc} title={title} description={description}/>
+			// </div>
 		);
 	}
 	const cardsListItems = cardsData.map(renderTopImageCard);
-	const classes = useStyles();
 	return (
-		<div key={count} className={classes.cardsContainer}>
+		<div key={count} className={classes.cards}>
 			{cardsListItems}
 		</div>
 	);

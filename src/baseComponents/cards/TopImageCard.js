@@ -1,18 +1,22 @@
 import React from 'react';
 import { createUseStyles } from 'react-jss';
+import Image from '../Image';
 
 const useStyles = createUseStyles({
 	card: {
 		backgroundColor: 'halfwhite',
-		color: 'red',
+		color: 'black',
 		padding: '1rem',
-		height: '4rem',
+		height: 'auto',
 		border: '1px solid #ccc',
 		border: '1px solid #ccc',
-		boxShadow: '2px 2px 6px 0px  rgba(0,0,0,0.3)'
+		boxShadow: '2px 2px 6px 0px  rgba(0,0,0,0.3)',
+		flexDirection: 'column',
+		fontFamily: "MencoMedium"
 	},
 	cardImage: {
-		marginRight: '1em'
+		// marginRight: '1em',
+		flex: '1'
 	},
 	cardContent: {
 		marginRight: '1px'
@@ -22,6 +26,11 @@ const useStyles = createUseStyles({
 	},
 	cardDescription: {
 		fontSize: '12px'
+	},
+	cardBody:{
+		display: 'flex',
+		flexDirection: 'column',
+		flex: '1'
 	}
 });
 
@@ -30,7 +39,9 @@ function TopImageCard({ id, imgSrc, imgAlt = '', title, description }) {
 
 	return (
 		<div key={id} className={classes.card}>
-			<img className={classes.cardImage} src={imgSrc} alt={imgAlt} />
+				<Image  src={'/images/platform/Platform1.svg'} type={'portfolio'} />
+		
+			
 			<div className={classes.cardBody}>
 				<h3 className={classes.cardTitle}>{title}</h3>
 				<p>{description}</p>
