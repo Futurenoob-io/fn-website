@@ -6,6 +6,7 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'bundle.js',
+		chunkFilename: '[name].bundle.js',
 		publicPath: '/'
 	},
 	module: {
@@ -15,8 +16,8 @@ module.exports = {
 			// rules for modules (configure loaders, parser options, etc.)
 			{
 				test: /\.jsx?$/,
-				include: [ path.resolve(__dirname, 'src') ],
-				exclude: [ path.resolve(__dirname, 'node_modules') ],
+				include: [path.resolve(__dirname, 'src')],
+				exclude: [path.resolve(__dirname, 'node_modules')],
 				loader: 'babel-loader'
 			},
 			{
