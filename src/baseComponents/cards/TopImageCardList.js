@@ -18,11 +18,11 @@ let count = 0;
 
 function TopCardList({ cardsData }) {
 	const classes = useStyles();
-	function renderTopImageCard({ id, imgSrc, imgAlt = '', title, description }) {
+	function renderTopImageCard({ id, imgSrc, imgAlt = '', title, description, subTitle }) {
 		count++;
 		return (
 			// <div key={count}>
-				<TopImageCard id={id} imgSrc={imgSrc} title={title} description={description}/>
+			<TopImageCard id={id} imgSrc={imgSrc} title={title} subTitle={subTitle} description={description} />
 			// </div>
 		);
 	}

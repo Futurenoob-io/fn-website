@@ -3,6 +3,7 @@ import { createUseStyles } from 'react-jss';
 import Title from '../Title';
 import Text from '../Text';
 import Button from '../Button';
+import classNames from 'classnames';
 
 const useStyles = createUseStyles({
 	container: {
@@ -12,7 +13,10 @@ const useStyles = createUseStyles({
 		borderRadius: '6px',
 		// margin: '0 200px 0 200px',
 		padding: '8px 80px 80px 80px',
-		background: '#E1EFFA'
+		background: '#FF9643'
+	},
+	topCardContainer:{
+         background: '#E5E5E5'
 	},
 	mailTo: {
 		fontWeight: 'bold',
@@ -26,9 +30,10 @@ const useStyles = createUseStyles({
 export default function CTACard({ title, description, children, actionType = 'earlyAccess' }) {
 	const classes = useStyles();
 	const handleEarlyAccessClick = (e) => console.log(e);
+	const containerClass = actionType==='TopCard'? classNames(classes.container,classes.topCardContainer) : classes.container;
 	return (
 		<div>
-			<div className={classes.container}>
+			<div className={containerClass}>
 				<Title title={title} color="primary" size="xl" />
 				<Text type="description" text={description} />
 				{actionType === 'earlyAccess' && (
