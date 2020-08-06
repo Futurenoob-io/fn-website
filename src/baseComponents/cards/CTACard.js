@@ -30,7 +30,7 @@ const useStyles = createUseStyles({
 
 // TODO WRITE A ACTIONS:JS FILE - put all actions in that
 // and here pass the type and get the object
-export default function CTACard({ title, description, children, actionType = 'earlyAccess', actionHandler=()=>{} }) {
+export default function CTACard({isSeeMore=false, title, description, children, actionType = 'earlyAccess', actionHandler=()=>{} }) {
 	const classes = useStyles();
 
 	const handleEarlyAccessClick = (e) => console.log(e);
@@ -61,7 +61,7 @@ export default function CTACard({ title, description, children, actionType = 'ea
 					<Button
 						key="See More"
 						type="primary"
-						label={'See More'}
+						label={!isSeeMore ? 'See More' : 'See Less'}
 						onClick={actionHandler}
 					/>
 				)}

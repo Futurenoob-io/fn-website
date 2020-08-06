@@ -22,7 +22,7 @@ export default function Platform() {
 		<div>
 			<MediaObjectList id={'platformMainCards'} data={mainCards} />
 			<CTACard id={'platform-readyToSeeWhatWeBuild'} title={whatWeBuildTitle} description={whatWeBuildDesc} />
-			<CTACard actionHandler={handleSeeMoreClick} id={'IntegrationPanel'} actionType={"IntegrationTopCard"} title={integrationTitle} description={""}>
+			<CTACard isSeeMore={isSeeMore} actionHandler={handleSeeMoreClick} id={'IntegrationPanel'} actionType={"IntegrationTopCard"} title={integrationTitle} description={""}>
 				<TopImageCardList cardsData={gamingEngines} type={'integration'} />
 			</CTACard>
 			

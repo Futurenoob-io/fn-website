@@ -10,7 +10,7 @@ const useStyles = createUseStyles({
 		display: 'grid',
 		gridGap: '1rem',
 		gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-		marginBottom: '10px'
+		marginBottom: '73px'
 	},
     portfolio: {
 		girdGap: '3rem',
