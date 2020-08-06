@@ -3,9 +3,10 @@ import MediaObject from '../baseComponents/cards/MediaObject';
 import aboutData from '../data/about.json';
 import CTACard from '../baseComponents/cards/CTACard';
 import TeamMembersPanel from '../baseComponents/TeamMembersPanel';
+import ImageCardList from '../baseComponents/cards/ImageCardList';
 
 export default function About() {
-	const { contact, mainCard, teamCards } = aboutData.about;
+	const { contact, mainCard, teamCards, partners } = aboutData.about;
 	const {
 		id: rId,
 		title: rTitle,
@@ -14,9 +15,10 @@ export default function About() {
 		backGroundColor: rBackGroundColor,
 		description: rDescription
 	} = mainCard;
-	const {data} = teamCards;
+	const {data, title: teamTitle} = teamCards;
 
 	const { id: contactId, title: contactTitle, description: contactDescription } = contact;
+	const {title:partnerTitle, description: partnerDescription, images: partnerImages} = partners 
 
 	return (
 		<div>
@@ -30,13 +32,14 @@ export default function About() {
 				backgroundColor={rBackGroundColor}
 				imageDirection={rImageDirection}
 			/>
+			<ImageCardList title={partnerTitle} description={partnerDescription} images={partnerImages}/>
 			<CTACard
 				id={contactId}
 				title={contactTitle}
 				description={contactDescription}
 				actionType={'conatctSupportMail'}
 			/>
-			<TeamMembersPanel data={data}/>
+			<TeamMembersPanel title={teamTitle} data={data}/>
 		</div>
 	);
 }

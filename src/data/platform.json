@@ -52,10 +52,73 @@
 				}
 			]
 		},
+		"investorCards": {
+			"type": "integrationCards",
+			"title": "Integration are Services Panels",
+			"data": {
+                 "gamingEngines": [{
+					"id": "Game Engine1",
+					"title": "Game Engine 1",
+					"subTitle": "Position of the person",
+					"description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+					"imageDirection": "leftTopOutsideImage",
+					"imgSrc": "/images/platform/Platform1.svg",
+					"linkedIn": "https://www.linkedin.com/in/priya-vanka/"
+				},
+				{
+					"id": "Game Engine2",
+					"title": "Game Engine 2",
+					"subTitle": "Position of the person",
+					"description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+					"imageDirection": "leftTopOutsideImage",
+					"imgSrc": "/images/platform/Platform2.svg",
+					"linkedIn": "https://www.linkedin.com/in/priya-vanka/"
+				},
+				{
+					"id": "Game Engine3",
+					"title": "Game Engine 3",
+					"subTitle": "Position of the person",
+					"description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+					"imageDirection": "leftTopOutsideImage",
+					"imgSrc": "/images/platform/Platform3.svg",
+					"linkedIn": "https://www.linkedin.com/in/priya-vanka/"
+				},
+				{
+					"id": "Game Engine4",
+					"title": "Game Engine 4",
+					"subTitle": "Position of the person",
+					"description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+					"imageDirection": "leftTopOutsideImage",
+					"imgSrc": "/images/platform/Platform4.svg",
+					"linkedIn": "https://www.linkedin.com/in/priya-vanka/"
+				},
+				{
+					"id": "Game Engine5",
+					"title": "Game Engine 5",
+					"subTitle": "Position of the person",
+					"description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+					"imageDirection": "leftTopOutsideImage",
+					"imgSrc": "/images/platform/Platform5.svg",
+					"linkedIn": "https://www.linkedin.com/in/priya-vanka/"
+				}]
+				}
+		},
 		"readyToSeeWhatWebuild": {
 			"id": "platform-readyToSeeWhatWeBuild",
 			"title": "Ready to see and test out what we are building?",
 			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac suscipit nisl. Ut et eget dolor et neque tempor sagittis aliquam magna diam, lobortis a lorem acronimu eleifend sagittis sem.."
+		},
+		"futureIntegrations": {
+			"title" : "Future Integrations",
+			"description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac suscipit nisl. Ut et eget dolor et neque tempor sagittis aliquam magna diam, lobortis a lorem acronimu eleifend sagittis sem..",
+			"images": [{
+				"title": "Adobe",
+				"imgSrc": "/images/platform/integrations/adobe.svg"
+			},
+			{
+				"title": "unity",
+				"imgSrc": "/images/platform/integrations/unity.svg"
+			}]
 		}
 	}
 }

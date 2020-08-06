@@ -11,14 +11,20 @@ const useStyles = createUseStyles({
 
 	},
 	small: {
-
+	  width: '201px',
+	  height: '58px'
 	},
 	portfolio: {
 		height: '172px',
 		width: '259px',
-		objectFit: 'none',
 		maxWidth: '100%',
-		maxHeight: '100%'
+		maxHeight: '100%',
+		objectFit: 'cover',
+	},
+	integration:{
+		height: '63px',
+		width: '63px',
+		objectFit: 'cover',
 	}
 })
 function Image({ src, description, type = 'large' }) {

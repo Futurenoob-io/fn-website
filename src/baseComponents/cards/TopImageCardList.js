@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { createUseStyles } from 'react-jss';
 import TopImageCard from '../cards/TopImageCard';
+import classNames from 'classnames';
 
 const useStyles = createUseStyles({
 	cards: {
@@ -8,7 +9,12 @@ const useStyles = createUseStyles({
 		margin: '0 auto',
 		display: 'grid',
 		gridGap: '1rem',
-		gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))'
+		gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+		marginBottom: '10px'
+	},
+    portfolio: {
+		girdGap: '3rem',
+		gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))'
 	}
 });
 let count = 0;
@@ -16,19 +22,21 @@ let count = 0;
 // TODO remove hard code
 // TODO put show more
 
-function TopCardList({ cardsData }) {
+function TopCardList({ cardsData, type= "portfolio", isSeeMore }) {
 	const classes = useStyles();
+	const cardsClassName =  type === 'portfolio' ? classNames(classes.cards, classes.portfolio) : classes.cards;
 	function renderTopImageCard({ id, imgSrc, imgAlt = '', title, description, subTitle }) {
 		count++;
 		return (
 			// <div key={count}>
-			<TopImageCard id={id} imgSrc={imgSrc} title={title} subTitle={subTitle} description={description} />
+			<TopImageCard id={id} type={type} imgSrc={imgSrc} title={title} subTitle={subTitle} description={description} />
 			// </div>
 		);
 	}
-	const cardsListItems = cardsData.map(renderTopImageCard);
+	let cardsListItems = cardsData.map(renderTopImageCard);
+	cardsListItems = isSeeMore ? cardsListItems.filter((v,i)=> i<=4) : cardsListItems;
 	return (
-		<div key={count} className={classes.cards}>
+		<div key={count} className={cardsClassName}>
 			{cardsListItems}
 		</div>
 	);

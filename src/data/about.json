@@ -11,6 +11,7 @@
 
 		"teamCards": {
 			"type": "profileCards",
+			"title": "FutureNoob Team Members",
 			"data": [
 				{
 					"id": "About-person1",
@@ -64,6 +65,31 @@
 			"title": "Contact",
 			"description": "Lorem Ipsum is simply dummy *You can contact....blah blah blah*You can contact....blah blah blah",
 			"email": "support@futurenoob.io"
+		},
+		"partners":{
+			"title": "Partners",
+			"description": "Lorem Ipsum is simply dummy *You can contact....blah blah blah*You can contact....blah blah blah",
+			"images": [{
+				"title": "Partner1",
+				"imgSrc": ""
+			},
+			{
+				"title": "Partner2",
+				"imgSrc": "/"
+			},
+			{
+				"title": "Partner3",
+				"imgSrc": "/"
+			},
+			{
+				"title": "Partner4",
+				"imgSrc": "/"
+			},
+			{
+				"title": "Partner5",
+				"imgSrc": "/"
+			}
+		]
 		}
 	}
 }

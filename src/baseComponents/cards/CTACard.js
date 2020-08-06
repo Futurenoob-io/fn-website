@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { createUseStyles } from 'react-jss';
 import Title from '../Title';
 import Text from '../Text';
@@ -22,15 +22,21 @@ const useStyles = createUseStyles({
 		fontWeight: 'bold',
 		color: '#000',
 		fontSize: '38px'
-	}
+	},
+   integrationTopCardContainer:{
+	   background: 'white'
+   }
 });
 
 // TODO WRITE A ACTIONS:JS FILE - put all actions in that
 // and here pass the type and get the object
-export default function CTACard({ title, description, children, actionType = 'earlyAccess' }) {
+export default function CTACard({ title, description, children, actionType = 'earlyAccess', actionHandler=()=>{} }) {
 	const classes = useStyles();
+
 	const handleEarlyAccessClick = (e) => console.log(e);
-	const containerClass = actionType==='TopCard'? classNames(classes.container,classes.topCardContainer) : classes.container;
+	
+	let containerClass = actionType==='TopCard'? classNames(classes.container,classes.topCardContainer) : classes.container;
+	containerClass = actionType=== 'IntegrationTopCard'? classNames(classes.container, classes.integrationTopCardContainer): containerClass;
 	return (
 		<div>
 			<div className={containerClass}>
@@ -44,12 +50,21 @@ export default function CTACard({ title, description, children, actionType = 'ea
 						onClick={handleEarlyAccessClick}
 					/>
 				)}
+				
 				{actionType === 'conatctSupportMail' && (
 					<a href="mailto:support@futurenoob.io" className={classes.mailTo}>
 						support@futurenoob.io
 					</a>
 				)}
 				{children}
+				{actionType === 'IntegrationTopCard' && (
+					<Button
+						key="See More"
+						type="primary"
+						label={'See More'}
+						onClick={actionHandler}
+					/>
+				)}
 			</div>
 		</div>
 	);
